@@ -1,0 +1,33 @@
+
+.titulo{
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    font-size: 32px;
+    
+}
+.container-description{
+    padding-left: 150px;
+    p{  
+        
+        font-size: 18px;
+        color: white;
+    
+    }
+}
+
+
+
+table{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    border: 5px solid red;
+
+    td, th{
+        border: 3px solid red;
+        text-align: center;
+    }
+}
