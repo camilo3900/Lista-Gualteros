@@ -6,22 +6,22 @@
 <table class="table table-size">
     <thead>
       <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Matriculado</th>
+        <th scope="col">Id.</th>
+        <th scope="col">{{"nombre"|uppercase}}</th>
+        <th scope="col">{{"apellido"|uppercase}}</th>
+        <th scope="col">{{"edad"|uppercase}}</th>
+        <th scope="col">{{"correo"|uppercase}}</th>
+        <th scope="col">{{"matriculado"|uppercase}}</th>
       </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>1</td>
-        <td>Carlos</td>
-        <td>Peralta</td>
-        <td>33</td>
-        <td>carlitos_08@hotmail.com</td>
-        <td>Matriculado</td>
+    <tr *ngFor="let estudiante of estudiantes">
+        <td>{{estudiante.id}}</td>
+        <td>{{estudiante.nombre}}</td>
+        <td>{{estudiante.apellido}}</td>
+        <td>{{estudiante.edad}}</td>
+        <td>{{estudiante.correo|lowercase}}</td>
+        <td [ngStyle] = "{backgroundColor: estudiante.activo ? 'green':'red'}">{{estudiante.matriculado}}</td>
     </tr>
     
    <!--  <tr>
